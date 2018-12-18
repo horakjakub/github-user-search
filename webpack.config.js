@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const WebpackMonitor = require('webpack-monitor');
 
 module.exports = {
     module: {
@@ -37,6 +38,12 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
-        })
+        }),
+        new WebpackMonitor({
+            capture: true,
+            target: './monitor/myStatsStore.json',
+            launch: false ,
+            port: 3030,
+        }),
     ]
 };

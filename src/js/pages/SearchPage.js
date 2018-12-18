@@ -1,20 +1,41 @@
 import React, { Component } from "react";
-import "./SearchPage.scss"
+import { string, arrayOf } from 'prop-types'
+import { connect } from 'react-redux';
 
-class SearchPage extends Component {
-    constructor() {
-        super();
+import selectUsers from '../selectors'
+import "./SearchPage.scss";
+
+class SearchPageComponent extends Component {
+    constructor(props) {
+        super(props);
+
         this.state = {
             title: ""
         };
     }
+
     render() {
+        const { users } = this.props;
+
         return (
             <div className={ 'pageContainer' }>
-                SEARCH 
+                SEARCH
+                {
+                    users ? users.join(' ') : null
+                }
             </div>
         );
     }
 }
 
-export default SearchPage;
+SearchPageComponent.propTypes = {
+    users: arrayOf(string),
+};
+
+const mapStateToProps = state => {
+    return {
+        users: selectUsers(state),
+    }
+};
+
+export default connect(mapStateToProps)(SearchPageComponent);
