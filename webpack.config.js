@@ -45,5 +45,6 @@ module.exports = {
             launch: false ,
             port: 3030,
         }),
-    ]
+    ],
+    devtool: "source-map"
 };
