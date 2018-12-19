@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './src/js/reducers';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import './src/global-styles.scss';
+import './src/styles/global-styles.scss';
 // import { replaceUsers } from "./src/js/actions/users.actions";
 
 const appWrapper = document.getElementById("root");
