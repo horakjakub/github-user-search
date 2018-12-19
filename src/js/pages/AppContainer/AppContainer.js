@@ -1,0 +1,32 @@
+import React, { Component } from "react";
+import AppBar from '@material-ui/core/AppBar';
+import Autocomplete from '../../components/Autocomplete/Autocomplete'
+import { SearchPage } from "../"
+import "./AppContainer.scss";
+
+class AppContainer extends Component {
+    constructor(){
+        super();
+    }
+
+    renderSearchBar(){
+        return (
+            <AppBar color="primary" position="fixed">
+                <div className="app-container__bar">
+                    <Autocomplete/>
+                </div>
+            </AppBar>
+        )
+    }
+
+    render() {
+        return (
+            <div className="app-container">
+                { this.renderSearchBar() }
+                <SearchPage />
+            </div>
+        );
+    }
+}
+
+export default AppContainer;
