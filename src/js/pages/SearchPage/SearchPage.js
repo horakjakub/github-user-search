@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { string, arrayOf } from 'prop-types'
+import { string, arrayOf, func } from 'prop-types'
 import { connect } from 'react-redux';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
-import selectUsers from '../../selectors'
+
+import { getUsers } from "../../actions/users.actions";
+import selectUsers from '../../selectors';
 import "./SearchPage.scss";
 
 const repositoresData = Array(10)
@@ -13,6 +15,7 @@ const repositoresData = Array(10)
 class SearchPageComponent extends Component {
     propTypes = {
         users: arrayOf(string),
+        getUsers: func,
     };
 
     constructor(props) {
@@ -22,6 +25,14 @@ class SearchPageComponent extends Component {
             title: ""
         };
     }
+
+    // componentDidMount() {
+    //     this.props.getUsers('horakjakub')
+    // }
+
+    // shouldComponentUpdate(nextProps, newState) {
+    //     const { users } = nextProps;
+    // }
 
     renderList(){
         return (
@@ -65,4 +76,10 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps)(SearchPageComponent);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getUsers: (name) => dispatch(getUsers(name))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPageComponent);

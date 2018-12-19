@@ -1,15 +1,19 @@
 import React from "react";
 import { render }from "react-dom";
 import { AppContainer }from './src/js/pages';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import reducers from './src/js/reducers';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import './src/styles/global-styles.scss';
-// import { replaceUsers } from "./src/js/actions/users.actions";
 
-const appWrapper = document.getElementById("root");
-const store = createStore(reducers);
+import { ApiService } from "./src/js/services";
+import './src/styles/global-styles.scss';
+
+const store = createStore(
+    reducers,
+    applyMiddleware(thunk.withExtraArgument(ApiService))
+);
 
 const theme = createMuiTheme(
     {
@@ -23,6 +27,8 @@ const theme = createMuiTheme(
         },
     }
 );
+
+const appWrapper = document.getElementById("root");
 
 appWrapper ? render(
     <MuiThemeProvider theme={theme}>
