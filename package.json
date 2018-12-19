@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@material-ui/core": "^3.7.0",
+    "autosuggest-highlight": "^3.1.1",
     "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "react-autosuggest": "^9.4.2",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/polyfill": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.6",
     "babel-jest": "^23.6.0",
@@ -41,8 +46,8 @@
     "webpack-monitor": "^1.0.14"
   },
   "scripts": {
-    "build": "webpack main.js --mode production",
-    "start": "webpack-dev-server main.js --open --mode development",
+    "build": "webpack init.js --mode production",
+    "start": "webpack-dev-server init.js --open --mode development",
     "test": "jest --config=jest.config.js",
     "lint": "eslint ./src/*"
   },

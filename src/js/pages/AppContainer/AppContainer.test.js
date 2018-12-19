@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import SearchPage from './SearchPage';
+import AppContainer from './AppContainer';
 
-describe('<SearchPage />', () => {
+describe('AppContainer', () => {
     it('should render', () => {
-        const wrapper = shallow(<SearchPage />);
+        const wrapper = shallow(<AppContainer />);
         expect(wrapper.length).toBeTruthy();
     });
 })

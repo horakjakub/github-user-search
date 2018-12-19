@@ -12,6 +12,15 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "indent": ["error", 4],
-  }
+    "indent": ["warn", 4]
+  },
+  "overrides": [
+    {
+      "files": [ "*.test.js" ],
+      "rules": {
+        "no-undef": "off",
+        "no-unused-vars": "off"
+      }
+    }
+  ]
 }
