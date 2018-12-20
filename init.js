@@ -1,6 +1,6 @@
 import React from "react";
 import { render }from "react-dom";
-import { AppContainer }from './src/js/pages';
+import { AppContainer } from './src/js/pages/AppContainer';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';

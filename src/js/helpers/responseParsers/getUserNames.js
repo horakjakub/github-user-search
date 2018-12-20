@@ -1,5 +1,5 @@
 const getUserNames = (response) => (
-    response.map((item) => item.login)
-)
+    response.items.map((item) => item.login)
+);
 
 export default getUserNames;

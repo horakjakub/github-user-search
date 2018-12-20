@@ -15,5 +15,35 @@
   width: 60%;
 }
 
-.search-page__list {
+.search-page__loader-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 1px;
+  border-radius: 50%;
+  border: 3px solid #EF5350;
+  border-color: #EF5350 transparent #EF5350 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

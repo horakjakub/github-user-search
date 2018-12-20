@@ -1,19 +1,27 @@
 import {
-    replaceUsers,
-    REPLACE_USERS,
-    getUsers,
-    getUserDone,
+    getUsersRequest,
     GET_USERS_DONE,
-    getUserRequested,
     GET_USERS_REQUESTED
-} from "./users.actions";
+} from './users.actions';
 
-export default {
-    replaceUsers,
-    REPLACE_USERS,
-    getUser: getUsers,
-    getUserDone,
+import {
+    getRepositoriesRequest,
+    GET_REPOSITORIES_DONE,
+    GET_REPOSITORIES_REQUESTED
+} from './repositories.actions';
+
+import {
+    setCurrentUser,
+    SET_CURRENT_USER
+} from './user.action';
+
+export {
+    getUsersRequest,
     GET_USERS_DONE,
-    getUserRequested,
-    GET_USERS_REQUESTED
+    GET_USERS_REQUESTED,
+    getRepositoriesRequest,
+    GET_REPOSITORIES_DONE,
+    GET_REPOSITORIES_REQUESTED,
+    setCurrentUser,
+    SET_CURRENT_USER
 }

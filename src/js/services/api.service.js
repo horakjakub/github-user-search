@@ -10,33 +10,34 @@ export class ApiService {
     init(http){
         this.http = http.create({
             baseURL: DEFAULT_API_ADRESS,
-            timeout: 1000,
+            timeout: 5000,
         });
     }
 
     get(url){
         return this.http
             .get(url)
-            .catch(this.parseError)
             .then(this.parseResponse)
+            .catch(this.parseError)
     }
 
     getUsersByName(name){
         return this.get(`search/users?q=${name}`)
     }
 
-    getRepositoriesByUserName(name){
-        return this.get(`search/repositories?q=user:${name}`)
+    getRepositoriesByUserName(name, page, resultsPerPage = 10){
+        return this.get(`search/repositories?q=user:${name}&page=${page}&per_page=${resultsPerPage}`)
     }
 
     parseResponse(response){
-        return response && response.data && response.data.items ?
-            response.data.items : response;
+        return response && response.data ?
+            response.data : response;
     }
 
     parseError(errorResponse){
         /* eslint-disable-next-line no-console*/
         console.error(errorResponse);
+        throw errorResponse;
     }
 }
 
