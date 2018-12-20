@@ -12,10 +12,11 @@
     "plugin:react/recommended"
   ],
   "rules": {
-    "indent": ["warn", 4],
+    "indent": ["warn", 4, { "SwitchCase": 1 }],
     "no-unused-vars": "warn",
     "no-debugger": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "quotes": ["warn", "single"]
   },
   "overrides": [
     {
