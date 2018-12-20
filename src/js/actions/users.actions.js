@@ -1,4 +1,4 @@
-import { getUserNames } from "../helpers/responseParsers";
+import { getUserNames } from '../helpers/responseParsers';
 
 export const GET_USERS_REQUESTED = 'GET_USERS_REQUESTED';
 

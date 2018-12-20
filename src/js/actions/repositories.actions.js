@@ -26,7 +26,7 @@ export function getRepositoriesRequest(user) {
 
         const repositoriesLists = getState().repositories.lists;
         const userList = repositoriesLists[user];
-        const { page, list, total } = userList ? userList : { page: 0, list: [] };
+        const { page, list, total } = userList ? userList : { page: 0 };
         const nextPage = page + 1;
 
         if(userList && total && page === Math.ceil(total/10)){

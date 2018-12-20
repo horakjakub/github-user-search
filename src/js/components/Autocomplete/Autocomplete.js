@@ -12,9 +12,9 @@ import { isEqual, throttle, debounce } from 'lodash';
 
 import { getSuggestionValue, getSuggestions } from '../../helpers/suggestions';
 import { getLabeledArray } from '../../helpers/getLabeledArray';
-import { deburrPhrase } from "../../helpers/deburrPhrase";
-import { selectUsers } from "../../selectors";
-import { getUsersRequest, setCurrentUser } from "../../actions";
+import { deburrPhrase } from '../../helpers/deburrPhrase';
+import { selectUsers } from '../../selectors';
+import { getUsersRequest, setCurrentUser } from '../../actions';
 
 const styles = theme => ({
     root: {
@@ -95,13 +95,13 @@ class BasicAutocomplete extends Component {
 
         const inputValue = deburrPhrase(newValue);
 
-        if(event.type === "click" && inputValue && inputValue.length) {
+        if(event.type === 'click' && inputValue && inputValue.length) {
             this.props.setUser(inputValue)
         }
     };
 
     handleKey = () => (event) => {
-        if(event.key === "Enter") {
+        if(event.key === 'Enter') {
             this.props.setUser(this.state.single);
         }
     };

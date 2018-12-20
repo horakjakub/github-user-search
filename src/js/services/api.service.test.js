@@ -1,4 +1,4 @@
-import { ApiService, DEFAULT_API_ADRESS } from "./api.service";
+import { ApiService, DEFAULT_API_ADRESS } from './api.service';
 
 function successRequestMock(data) {
     return new Promise((resolve) => {
@@ -70,9 +70,9 @@ describe('ApiService', () => {
 
     describe('getRepositoriesByUserName()', () => {
         it('should call `get()` method with passed param, and string `search/repositories?q=user:`', () => {
-            apiService.getRepositoriesByUserName('someString');
+            apiService.getRepositoriesByUserName('someString', 1, 10);
 
-            expect(apiService.http.get).toHaveBeenCalledWith('search/repositories?q=user:someString');
+            expect(apiService.http.get).toHaveBeenCalledWith('search/repositories?q=user:someString&page=1&per_page=10');
         });
     });
 });

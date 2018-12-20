@@ -2,18 +2,18 @@ import {
     getUsersRequest,
     GET_USERS_DONE,
     GET_USERS_REQUESTED
-} from "./users.actions";
+} from './users.actions';
 
 import {
     getRepositoriesRequest,
     GET_REPOSITORIES_DONE,
     GET_REPOSITORIES_REQUESTED
-} from "./repositories.actions";
+} from './repositories.actions';
 
 import {
     setCurrentUser,
     SET_CURRENT_USER
-} from "./user.action";
+} from './user.action';
 
 export {
     getUsersRequest,

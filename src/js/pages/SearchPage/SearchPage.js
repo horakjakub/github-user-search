@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { string, func, object, number } from 'prop-types'
 import { connect } from 'react-redux';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -6,9 +6,9 @@ import ListItem from '@material-ui/core/ListItem';
 import { InView } from 'react-intersection-observer'
 import { throttle } from 'lodash';
 
-import { getRepositoriesRequest } from "../../actions";
-import { selectRepositoriesLists, selectUser} from "../../selectors"
-import "./SearchPage.scss";
+import { getRepositoriesRequest } from '../../actions';
+import { selectRepositoriesLists, selectUser} from '../../selectors'
+import './SearchPage.scss';
 
 class SearchPageComponent extends Component {
     propTypes = {

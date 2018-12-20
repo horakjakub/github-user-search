@@ -1,4 +1,4 @@
-import { GET_USERS_REQUESTED, GET_USERS_DONE } from "../actions";
+import { GET_USERS_REQUESTED, GET_USERS_DONE } from '../actions';
 
 const initalState = {
     isLoading: false,
