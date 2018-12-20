@@ -1,9 +1,9 @@
 @import "css-reset";
 
-:root, body, #root {
+:global :root, :global body, :global #root {
   height: 100%;
 }
 
-:root {
+:global :root {
   font-size: 14px;
 }

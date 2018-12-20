@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 
 import { Autocomplete } from '../../components/Autocomplete'
 import { SearchPage } from '../SearchPage'
-import './AppContainer.scss';
+import { container, bar } from './AppContainer.scss';
 
 class AppContainer extends Component {
     constructor(){
@@ -13,7 +13,7 @@ class AppContainer extends Component {
     renderSearchBar(){
         return (
             <AppBar color="primary" position="fixed">
-                <div className="app-container__bar">
+                <div className={ bar }>
                     <Autocomplete/>
                 </div>
             </AppBar>
@@ -22,7 +22,7 @@ class AppContainer extends Component {
 
     render() {
         return (
-            <div className="app-container">
+            <div className={ container }>
                 { this.renderSearchBar() }
                 <SearchPage />
             </div>
