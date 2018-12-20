@@ -1,4 +1,4 @@
-{
+{f339b97afc4d68fd27df66dd66cdd4b646ee41fa
   "name": "github-user-search",
   "version": "0.0.1",
   "description": "",
@@ -46,7 +46,6 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-monitor": "^1.0.14",
-    "yarn": "^1.12.3"
   },
   "scripts": {
     "build": "webpack init.js --mode production",
