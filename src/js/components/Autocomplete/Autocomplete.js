@@ -8,12 +8,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { object, func, arrayOf, string } from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { connect } from 'react-redux';
-import { deburr, isEqual } from 'lodash';
-import { throttle, debounce } from "throttle-debounce";
+import { isEqual, throttle, debounce } from 'lodash';
 
-import { getSuggestionValue, getSuggestions, getLabeledArray } from '../../helpers'
-import selectUsers from "../../selectors";
-import {getUsers} from "../../actions/users.actions";
+import { getSuggestionValue, getSuggestions } from '../../helpers/suggestions';
+import { getLabeledArray } from '../../helpers/getLabeledArray';
+import { deburrPhrase } from "../../helpers/deburrPhrase";
+import { selectUsers } from "../../selectors";
+import { getUsersRequest, setCurrentUser } from "../../actions";
 
 const styles = theme => ({
     root: {
@@ -51,11 +52,12 @@ class BasicAutocomplete extends Component {
     propTypes = {
         classes: object.isRequired,
         users: arrayOf(string),
-        getUsers: func,
+        getUsers: func.isRequired,
+        setUser: func.isRequired,
     };
 
-    autocompleteSearchDebounced = debounce(500, this.props.getUsers);
-    autocompleteSearchThrottled = throttle(500, this.props.getUsers);
+    autocompleteSearchDebounced = debounce(this.props.getUsers, 500);
+    autocompleteSearchThrottled = throttle(this.props.getUsers, 500);
 
     shouldComponentUpdate(nextProps, newState) {
         const { users } = nextProps;
@@ -71,7 +73,7 @@ class BasicAutocomplete extends Component {
     }
 
     handleSuggestionsFetchRequested = ({ value }) => {
-        const inputValue = deburr(value.trim()).toLowerCase();
+        const inputValue = deburrPhrase(value);
         const inputLength = inputValue.length;
         if (inputLength.length < 5) {
             this.autocompleteSearchThrottled(inputValue);
@@ -90,6 +92,18 @@ class BasicAutocomplete extends Component {
         this.setState({
             [name]: newValue,
         });
+
+        const inputValue = deburrPhrase(newValue);
+
+        if(event.type === "click" && inputValue && inputValue.length) {
+            this.props.setUser(inputValue)
+        }
+    };
+
+    handleKey = () => (event) => {
+        if(event.key === "Enter") {
+            this.props.setUser(this.state.single);
+        }
     };
 
     renderInputComponent(inputProps) {
@@ -156,6 +170,7 @@ class BasicAutocomplete extends Component {
                         placeholder: 'Search a user',
                         value: this.state.single,
                         onChange: this.handleChange('single'),
+                        onKeyDown: this.handleKey(),
                     }}
                     theme={{
                         container: classes.container,
@@ -185,7 +200,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getUsers: (name) => dispatch(getUsers(name))
+        getUsers: (name) => dispatch(getUsersRequest(name)),
+        setUser: (userName) => dispatch(setCurrentUser(userName)),
     }
 };
 

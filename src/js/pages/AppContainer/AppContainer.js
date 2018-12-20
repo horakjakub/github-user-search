@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import AppBar from '@material-ui/core/AppBar';
-import Autocomplete from '../../components/Autocomplete/Autocomplete'
-import { SearchPage } from "../"
+
+import { Autocomplete } from '../../components/Autocomplete'
+import { SearchPage } from "../SearchPage"
 import "./AppContainer.scss";
 
 class AppContainer extends Component {

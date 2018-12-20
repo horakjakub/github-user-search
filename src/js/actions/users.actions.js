@@ -1,30 +1,29 @@
-import { getUserNames } from "../helpers";
+import { getUserNames } from "../helpers/responseParsers";
 
 export const GET_USERS_REQUESTED = 'GET_USERS_REQUESTED';
 
-export function getUserRequested() {
+function getUsersRequested() {
     return {
-        type: 'GET_USERS_REQUESTED'
+        type: GET_USERS_REQUESTED
     };
 }
 
 export const GET_USERS_DONE = 'GET_USERS_DONE';
 
-export function getUserDone(userNames) {
+function getUsersDone(userNames) {
     return {
-        type: 'GET_USERS_DONE',
+        type: GET_USERS_DONE,
         payload: userNames
     };
 }
 
-export function getUsers(name) {
+export function getUsersRequest(name) {
     return (dispatch, getState, api) => {
-        // @TODO - change on async await - after
-        dispatch(getUserRequested());
+        dispatch(getUsersRequested());
 
         api.getUsersByName(name)
             .then((userNames)=> {
-                dispatch(getUserDone(getUserNames(userNames)))
+                dispatch(getUsersDone(getUserNames(userNames)))
             })
     }
 }

@@ -1,54 +1,105 @@
 import React, { Component } from "react";
-import { string, arrayOf, func } from 'prop-types'
+import { string, func, object, number } from 'prop-types'
 import { connect } from 'react-redux';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
+import { InView } from 'react-intersection-observer'
+import { throttle } from 'lodash';
 
-import { getUsers } from "../../actions/users.actions";
-import selectUsers from '../../selectors';
+import { getRepositoriesRequest } from "../../actions";
+import { selectRepositoriesLists, selectUser} from "../../selectors"
 import "./SearchPage.scss";
-
-const repositoresData = Array(10)
-    .fill({ name: 'Repository', url: 'www.google.com' })
-    .map((data, i) => ({ name: `${data.name} ${i}`, url: data.url }));
 
 class SearchPageComponent extends Component {
     propTypes = {
-        users: arrayOf(string),
-        getUsers: func,
+        repositoriesLists: object,
+        currentPage: number,
+        currentUser: string,
+        total: number,
+        getRepositories: func.isRequired,
+    };
+
+    getRepositoriesThrottled = throttle(this.props.getRepositories, 500);
+
+    state = {
+        inView: false,
     };
 
     constructor(props) {
         super(props);
-
-        this.state = {
-            title: ""
-        };
     }
 
-    // componentDidMount() {
-    //     this.props.getUsers('horakjakub')
-    // }
+    shouldComponentUpdate(nextProps) {
+        const { repositoriesLists, currentUser, getRepositories } = this.props;
+        const nextUser = nextProps.currentUser;
+        const nextLists = nextProps.repositoriesLists;
 
-    // shouldComponentUpdate(nextProps, newState) {
-    //     const { users } = nextProps;
-    // }
+        if(nextUser && currentUser !== nextUser){
+            getRepositories(nextUser);
+            return false;
+        } else if(this.state.inView && this.isLoadRepositoriesPossible(this.getCurrentList(nextProps))) {
+            this.getRepositoriesThrottled(nextUser);
+            return true;
+        }
+        return repositoriesLists !== nextLists;
+    }
+
+    onInView = () => (inView) => {
+        const { currentUser } = this.props;
+
+        this.setState({ inView });
+
+        if(inView && this.isLoadRepositoriesPossible()) {
+            this.getRepositoriesThrottled(currentUser);
+        } else if (this.isLoadRepositoriesPossible()) {
+            this.getRepositoriesThrottled.cancel();
+        }
+    };
 
     renderList(){
+        const repositoriesList = this.getCurrentList();
+
+        if(!repositoriesList){
+            return;
+        }
+
         return (
-            <div className="search-page__list">
-                {
-                    repositoresData
-                        .map((itemData, i) => {
-                            return this.renderListItem(itemData, i)
-                        })
-                }
+            <div className={ 'search-page__list__wrapper'}>
+                <div className="search-page__list">
+                    {
+                        repositoriesList.list
+                            .map((itemData, i) => {
+                                return this.renderListItem(itemData, i)
+                            })
+                    }
+                    {
+                        this.isLoadRepositoriesPossible() ? this.renderLoader() : null
+                    }
+                </div>
+            </div>
+        )
+    }
+
+    getCurrentList(props = this.props){
+        const { repositoriesLists, currentUser } = props;
+        return repositoriesLists && currentUser && repositoriesLists[currentUser] && repositoriesLists[currentUser];
+    }
+
+    isLoadRepositoriesPossible(repositoriesList = this.getCurrentList()) {
+        return repositoriesList && repositoriesList.page !== Math.ceil(repositoriesList.total / 10);
+    }
+
+    renderLoader() {
+        return (
+            <div className={'search-page__loader-wrapper'}>
+                <InView tag="div" onChange={ this.onInView() }/>
+                <div className="lds-dual-ring" />
             </div>
         )
     }
 
     renderListItem(item, index) {
-        const {name, url } = item;
+        const { name, url } = item;
 
         return (
             <ListItem button component="a" key={index} href={ url } target="_blank">
@@ -60,11 +111,7 @@ class SearchPageComponent extends Component {
     render() {
         return (
             <div className={ 'search-page' }>
-                <div className={ 'search-page__list__wrapper'}>
-                    {
-                        this.renderList()
-                    }
-                </div>
+                { this.renderList() }
             </div>
         );
     }
@@ -72,13 +119,14 @@ class SearchPageComponent extends Component {
 
 const mapStateToProps = state => {
     return {
-        users: selectUsers(state),
+        currentUser: selectUser(state),
+        repositoriesLists: selectRepositoriesLists(state),
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getUsers: (name) => dispatch(getUsers(name))
+        getRepositories: (userName) => dispatch(getRepositoriesRequest(userName)),
     }
 };
 

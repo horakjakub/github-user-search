@@ -1,7 +1,7 @@
-import { deburr } from 'lodash';
+import { deburrPhrase } from '../deburrPhrase';
 
 export function getSuggestions(value, suggestions) {
-    const inputValue = deburr(value.trim()).toLowerCase();
+    const inputValue = deburrPhrase(value.trim()).toLowerCase();
     const inputLength = inputValue.length;
     let count = 0;
 
