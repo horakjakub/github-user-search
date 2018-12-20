@@ -8,7 +8,7 @@ import { throttle } from 'lodash';
 
 import { getRepositoriesRequest } from '../../actions';
 import { selectRepositoriesLists, selectUser} from '../../selectors'
-import './SearchPage.scss';
+import { page, listWrapper, loaderWrapper, loader } from './SearchPage.scss';
 
 class SearchPageComponent extends Component {
     propTypes = {
@@ -64,8 +64,8 @@ class SearchPageComponent extends Component {
         }
 
         return (
-            <div className={ 'search-page__list__wrapper'}>
-                <div className="search-page__list">
+            <div className={ listWrapper }>
+                <div>
                     {
                         repositoriesList.list
                             .map((itemData, i) => {
@@ -91,9 +91,9 @@ class SearchPageComponent extends Component {
 
     renderLoader() {
         return (
-            <div className={'search-page__loader-wrapper'}>
+            <div className={ loaderWrapper }>
                 <InView tag="div" onChange={ this.onInView() }/>
-                <div className="lds-dual-ring" />
+                <div className={ loader } />
             </div>
         )
     }
@@ -110,7 +110,7 @@ class SearchPageComponent extends Component {
 
     render() {
         return (
-            <div className={ 'search-page' }>
+            <div className={ page }>
                 { this.renderList() }
             </div>
         );

@@ -1,5 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const WebpackMonitor = require('webpack-monitor');
+const path = require('path');
 
 module.exports = {
     module: {
@@ -9,10 +10,10 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: "babel-loader"
+                        loader: 'babel-loader'
                     },
                     {
-                        loader: "eslint-loader"
+                        loader: 'eslint-loader'
                     },
                 ]
             },
@@ -20,24 +21,37 @@ module.exports = {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: "html-loader"
+                        loader: 'html-loader'
                     }
                 ]
             },
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            context: path.resolve(__dirname, 'context'), // Allow to redefine basic loader context for `local-ident-name`
+                            hashPrefix: 'hash', // Allow to add custom hash to generate more unique classes
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]',
+                            modules: true,
+                        },
+                    },
+                    {
+
+                        loader: 'sass-loader',
+                    }
+                ],
             }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
-            filename: "./index.html"
+            template: './src/index.html',
+            filename: './index.html'
         }),
         new WebpackMonitor({
             capture: true,
@@ -46,5 +60,5 @@ module.exports = {
             port: 3030,
         }),
     ],
-    devtool: "source-map"
+    devtool: 'source-map'
 };

@@ -1,4 +1,4 @@
-.search-page {
+.page {
   width: 100%;
   height: 100%;
   background: rgba(0,0, 0, 0.05);
@@ -8,26 +8,26 @@
   overflow-y: auto;
 }
 
-.search-page__list__wrapper {
+.listWrapper {
   margin: 6rem 0 3rem 0;
   padding: 1.2rem;
   background: #fff;
   width: 60%;
 }
 
-.search-page__loader-wrapper {
+.loaderWrapper {
   display: flex;
   justify-content: center;
   padding: 0.5rem;
 }
 
-.lds-dual-ring {
+.loader {
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
 }
 
-.lds-dual-ring:after {
+.loader:after {
   content: " ";
   display: block;
   width: 1.2rem;
@@ -36,10 +36,10 @@
   border-radius: 50%;
   border: 3px solid #EF5350;
   border-color: #EF5350 transparent #EF5350 transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+  animation: loader 1.2s linear infinite;
 }
 
-@keyframes lds-dual-ring {
+@keyframes loader {
   0% {
     transform: rotate(0deg);
   }
