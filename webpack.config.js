@@ -42,7 +42,7 @@ module.exports = {
         new WebpackMonitor({
             capture: true,
             target: './monitor/myStatsStore.json',
-            launch: false ,
+            launch: false,
             port: 3030,
         }),
     ],

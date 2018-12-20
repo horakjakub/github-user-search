@@ -5,10 +5,15 @@ import parse from 'autosuggest-highlight/parse';
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
-import { object } from 'prop-types';
+import { object, func, arrayOf, string } from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { connect } from 'react-redux';
+import { deburr, isEqual } from 'lodash';
+import { throttle, debounce } from "throttle-debounce";
 
-import { getSuggestionValue, getSuggestions } from '../../helpers'
+import { getSuggestionValue, getSuggestions, getLabeledArray } from '../../helpers'
+import selectUsers from "../../selectors";
+import {getUsers} from "../../actions/users.actions";
 
 const styles = theme => ({
     root: {
@@ -37,21 +42,42 @@ const styles = theme => ({
     },
 });
 
-class Autocomplete extends Component {
+class BasicAutocomplete extends Component {
     state = {
         single: '',
-        popper: '',
         suggestions: [],
     };
 
     propTypes = {
         classes: object.isRequired,
+        users: arrayOf(string),
+        getUsers: func,
     };
 
+    autocompleteSearchDebounced = debounce(500, this.props.getUsers);
+    autocompleteSearchThrottled = throttle(500, this.props.getUsers);
+
+    shouldComponentUpdate(nextProps, newState) {
+        const { users } = nextProps;
+
+        if(this.props.users !== nextProps.users){
+            this.setState({
+                suggestions: getSuggestions(this.state.single, getLabeledArray(users)),
+            });
+            return true;
+        } else {
+            return !isEqual(this.state, newState);
+        }
+    }
+
     handleSuggestionsFetchRequested = ({ value }) => {
-        this.setState({
-            suggestions: getSuggestions(value),
-        });
+        const inputValue = deburr(value.trim()).toLowerCase();
+        const inputLength = inputValue.length;
+        if (inputLength.length < 5) {
+            this.autocompleteSearchThrottled(inputValue);
+        } else if (inputLength) {
+            this.autocompleteSearchDebounced(inputValue);
+        }
     };
 
     handleSuggestionsClearRequested = () => {
@@ -127,7 +153,7 @@ class Autocomplete extends Component {
                     {...autosuggestProps}
                     inputProps={{
                         classes,
-                        placeholder: 'Search a country (start with a)',
+                        placeholder: 'Search a user',
                         value: this.state.single,
                         onChange: this.handleChange('single'),
                     }}
@@ -149,4 +175,18 @@ class Autocomplete extends Component {
     }
 }
 
-export default withStyles(styles)(Autocomplete);
+export const AutocompleteWithStyles = withStyles(styles)(BasicAutocomplete);
+
+const mapStateToProps = state => {
+    return {
+        users: selectUsers(state),
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getUsers: (name) => dispatch(getUsers(name))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AutocompleteWithStyles);

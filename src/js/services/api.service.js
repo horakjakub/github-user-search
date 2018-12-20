@@ -30,12 +30,13 @@ export class ApiService {
     }
 
     parseResponse(response){
-        return response.data.items;
+        return response && response.data && response.data.items ?
+            response.data.items : response;
     }
 
     parseError(errorResponse){
         /* eslint-disable-next-line no-console*/
-        console.error(errorResponse)
+        console.error(errorResponse);
     }
 }
 
