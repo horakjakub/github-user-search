@@ -13,6 +13,8 @@
     "redux": "^4.0.1"
   },
   "devDependencies": {
+    "nodemon": "^1.18.9",
+    "express": "^4.16.4",
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/polyfill": "^7.0.0",
@@ -43,13 +45,15 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
-    "webpack-monitor": "^1.0.14"
+    "webpack-monitor": "^1.0.14",
+    "yarn": "^1.12.3"
   },
   "scripts": {
     "build": "webpack init.js --mode production",
     "start": "webpack-dev-server init.js --open --mode development",
     "test": "jest --config=jest.config.js",
-    "lint": "eslint ./src/*"
+    "lint": "eslint ./src/*",
+    "server-start": "npm run build && node server.js"
   },
   "repository": {
     "type": "git",
