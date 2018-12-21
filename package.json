@@ -2,7 +2,7 @@
   "name": "github-user-search",
   "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "init.js",
   "dependencies": {
     "@material-ui/core": "^3.7.0",
     "autosuggest-highlight": "^3.1.1",
