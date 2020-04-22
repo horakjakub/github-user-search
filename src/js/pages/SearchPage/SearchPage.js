@@ -10,6 +10,7 @@ import { getRepositoriesRequest } from '../../actions';
 import { selectRepositoriesLists, selectUser} from '../../selectors'
 import { page, listWrapper, loaderWrapper, loader } from './SearchPage.scss';
 
+export const SearchPageComponent2 = () => {};
 class SearchPageComponent extends Component {
     propTypes = {
         repositoriesLists: object,

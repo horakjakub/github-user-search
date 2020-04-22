@@ -1,0 +1,449 @@
+
+> github-user-search@0.0.2 start /home/jakub/Repos/github-user-search
+> webpack-dev-server init.js --open --mode development
+
+(node:22231) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+[34mℹ[39m [90m｢wds｣[39m: Project is running at [1m[34mhttp://localhost:8080/[39m[22m
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from [1m[34m/[39m[22m
+Warning: React version not specified in eslint-plugin-react settings. See https://github.com/yannickcr/eslint-plugin-react#configuration.
+Browserslist: caniuse-lite is outdated. Please run next command `npm update caniuse-lite browserslist`
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m190377946151e825644d[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m5093[39m[22mms
+Built at: 04/14/2020 [1m10:26:44 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[0] [1mmulti (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m 40 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./init.js[39m[22m] 927 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/styles/index.js[39m[22m] 1.61 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/loglevel/lib/loglevel.js[39m[22m] 7.68 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/react-dom/index.js[39m[22m] 1.33 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/react-redux/es/index.js[39m[22m] 270 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/react/index.js[39m[22m] 190 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/redux-thunk/es/index.js[39m[22m] 481 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/redux/es/redux.js[39m[22m] 22.6 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/url/url.js[39m[22m] 22.8 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] [1m(webpack)-dev-server/client?http://localhost:8080[39m[22m 7.78 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[./node_modules/webpack-dev-server/client/overlay.js] [1m(webpack)-dev-server/client/overlay.js[39m[22m 3.58 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[./node_modules/webpack-dev-server/client/socket.js] [1m(webpack)-dev-server/client/socket.js[39m[22m 1.05 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[./node_modules/webpack-dev-server/node_modules/strip-ansi/index.js] [1m(webpack)-dev-server/node_modules/strip-ansi/index.js[39m[22m 161 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[./node_modules/webpack/hot sync ^\.\/log$] [1m(webpack)/hot sync nonrecursive ^\.\/log$[39m[22m 170 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+    + 365 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+  20:1  warning  Expected indentation of 4 spaces but found 0  indent
+
+✖ 1 problem (0 errors, 1 warning)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+    [[1m./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html[39m[22m] 397 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m5d0d4f512ddd28e74274[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1305[39m[22mms
+Built at: 04/14/2020 [1m10:35:19 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 3.42 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+  10:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  11:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  12:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  17:1  warning  Expected indentation of 4 spaces but found 8       indent
+  18:1  warning  Expected indentation of 0 spaces but found 4       indent
+  20:1  warning  Expected indentation of 0 spaces but found 4       indent
+  21:1  warning  Expected indentation of 4 spaces but found 8       indent
+  22:1  warning  Expected indentation of 8 spaces but found 12      indent
+  23:1  warning  Expected indentation of 12 spaces but found 16     indent
+  24:1  warning  Expected indentation of 12 spaces but found 16     indent
+  25:1  warning  Expected indentation of 8 spaces but found 12      indent
+  26:1  warning  Expected indentation of 4 spaces but found 8       indent
+  27:1  warning  Expected indentation of 0 spaces but found 4       indent
+  29:1  warning  Expected indentation of 0 spaces but found 4       indent
+  30:1  warning  Expected indentation of 4 spaces but found 8       indent
+  31:1  warning  Expected indentation of 8 spaces but found 12      indent
+  32:1  warning  Expected indentation of 12 spaces but found 16     indent
+  33:1  warning  Expected indentation of 12 spaces but found 16     indent
+  34:1  warning  Expected indentation of 8 spaces but found 12      indent
+  35:1  warning  Expected indentation of 4 spaces but found 8       indent
+  36:1  warning  Expected indentation of 0 spaces but found 4       indent
+
+✖ 21 problems (0 errors, 21 warnings)
+  0 errors and 21 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1mff859bcc9c7febbc5bf6[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1281[39m[22mms
+Built at: 04/14/2020 [1m10:36:04 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 3.44 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+  10:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  11:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  12:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  17:1  warning  Expected indentation of 4 spaces but found 8       indent
+  18:1  warning  Expected indentation of 0 spaces but found 4       indent
+  20:1  warning  Expected indentation of 0 spaces but found 4       indent
+  21:1  warning  Expected indentation of 4 spaces but found 8       indent
+  22:1  warning  Expected indentation of 8 spaces but found 12      indent
+  23:1  warning  Expected indentation of 12 spaces but found 16     indent
+  24:1  warning  Expected indentation of 12 spaces but found 16     indent
+  25:1  warning  Expected indentation of 8 spaces but found 12      indent
+  26:1  warning  Expected indentation of 4 spaces but found 8       indent
+  27:1  warning  Expected indentation of 0 spaces but found 4       indent
+  29:1  warning  Expected indentation of 0 spaces but found 4       indent
+  30:1  warning  Expected indentation of 4 spaces but found 8       indent
+  31:1  warning  Expected indentation of 8 spaces but found 12      indent
+  32:1  warning  Expected indentation of 12 spaces but found 16     indent
+  33:1  warning  Expected indentation of 12 spaces but found 16     indent
+  34:1  warning  Expected indentation of 8 spaces but found 12      indent
+  35:1  warning  Expected indentation of 4 spaces but found 8       indent
+  36:1  warning  Expected indentation of 0 spaces but found 4       indent
+
+✖ 21 problems (0 errors, 21 warnings)
+  0 errors and 21 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1mdd012440bcb3b572064a[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1265[39m[22mms
+Built at: 04/14/2020 [1m10:40:48 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 716 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   1:17  warning  'Component' is defined but never used              no-unused-vars
+  10:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+  11:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  12:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  17:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+  18:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  19:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  20:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+
+✖ 8 problems (0 errors, 8 warnings)
+  0 errors and 7 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m49b870c6b8c3d311c616[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1004[39m[22mms
+Built at: 04/14/2020 [1m10:41:00 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+ + 1 hidden asset
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 716 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   1:17  warning  'Component' is defined but never used              no-unused-vars
+   9:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+  10:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  11:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  16:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+  17:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  18:1   warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  19:1   warning  Expected indentation of 4 spaces but found 1 tab   indent
+
+✖ 8 problems (0 errors, 8 warnings)
+  0 errors and 7 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m04999cda29cda106a6e4[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1091[39m[22mms
+Built at: 04/14/2020 [1m10:45:18 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 701 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   9:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  10:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  11:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  16:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  17:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  18:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  19:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+
+✖ 7 problems (0 errors, 7 warnings)
+  0 errors and 7 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[31m✖[39m [90m｢wdm｣[39m: Hash: [1mf3a131c70229382ab673[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m841[39m[22mms
+Built at: 04/14/2020 [1m10:47:58 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   1.63 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 1.56 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[31m [failed][39m[22m[1m[31m [2 errors][39m[22m
+    + 215 hidden modules
+
+[1m[31mERROR in ./src/js/pages/AppContainer/AppContainer.js
+Module Error (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+  11:3  error  Parsing error: Unexpected token
+
+   9 | 	<AppBar color="primary" position="fixed">
+  10 | 		<div className={ bar }> <Autocomplete
+> 11 | 		</div>
+     | 		^
+  12 |     </AppBar>
+  13 | );
+  14 |
+
+✖ 1 problem (1 error, 0 warnings)
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+
+[1m[31mERROR in ./src/js/pages/AppContainer/AppContainer.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js: Unexpected token (11:2)
+
+   9 | 	<AppBar color="primary" position="fixed">
+  10 | 		<div className={ bar }> <Autocomplete
+> 11 | 		</div>
+     | 		^
+  12 |     </AppBar>
+  13 | );
+  14 | 
+    at _class.raise (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:4047:15)
+    at _class.unexpected (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:5378:16)
+    at _class.jsxParseIdentifier (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3523:14)
+    at _class.jsxParseNamespacedName (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3533:23)
+    at _class.jsxParseAttribute (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3616:24)
+    at _class.jsxParseOpeningElementAfterName (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3637:30)
+    at _class.jsxParseOpeningElementAt (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3630:19)
+    at _class.jsxParseElementAt (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3662:33)
+    at _class.jsxParseElementAt (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3678:34)
+    at _class.jsxParseElementAt (/home/jakub/Repos/github-user-search/node_modules/@babel/parser/lib/index.js:3678:34)
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m04999cda29cda106a6e4[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m2076[39m[22mms
+Built at: 04/14/2020 [1m10:48:21 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./node_modules/@material-ui/core/AppBar/AppBar.js[39m[22m] 4.72 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/AppBar/index.js[39m[22m] 350 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/ListItem/index.js[39m[22m] 356 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/ListItemText/index.js[39m[22m] 368 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/MenuItem/index.js[39m[22m] 356 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/Paper/index.js[39m[22m] 347 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/TextField/index.js[39m[22m] 359 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/@material-ui/core/utils/helpers.js[39m[22m] 2.53 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/autosuggest-highlight/match/index.js[39m[22m] 1.43 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./node_modules/autosuggest-highlight/parse/index.js[39m[22m] 893 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/components/Autocomplete/Autocomplete.js[39m[22m] 11.1 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/components/Autocomplete/index.js[39m[22m] 57 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 701 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+[[1m./src/js/pages/SearchPage/SearchPage.js[39m[22m] 7.43 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[[1m./src/js/pages/SearchPage/index.js[39m[22m] 53 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+    + 365 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   9:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  10:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  11:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  16:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+  17:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  18:1  warning  Expected indentation of 8 spaces but found 2 tabs  indent
+  19:1  warning  Expected indentation of 4 spaces but found 1 tab   indent
+
+✖ 7 problems (0 errors, 7 warnings)
+  0 errors and 7 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1mfe173410e4e907db8d9e[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1194[39m[22mms
+Built at: 04/14/2020 [1m10:48:49 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/AppContainer/AppContainer.js[39m[22m] 696 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m[1m[33m [1 warning][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   9:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+  10:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  11:1  warning  Expected indentation of 12 spaces but found 3 tabs  indent
+  12:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  17:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+  18:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  19:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  20:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+
+✖ 8 problems (0 errors, 8 warnings)
+  0 errors and 8 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+Writing new build
+[33m⚠[39m [90m｢wdm｣[39m: Hash: [1m5d4793f60de02dc669bd[39m[22m
+Version: webpack [1m4.27.1[39m[22m
+Time: [1m1385[39m[22mms
+Built at: 04/14/2020 [1m11:00:48 AM[39m[22m
+       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1m[32m./index.html[39m[22m  405 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+     [1m[32mmain.js[39m[22m   2.81 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+Entrypoint [1mmain[39m[22m = [1m[32mmain.js[39m[22m
+[[1m./src/js/pages/SearchPage/SearchPage.js[39m[22m] 7.5 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+    + 379 hidden modules
+
+[1m[33mWARNING in ./src/js/pages/AppContainer/AppContainer.js
+Module Warning (from ./node_modules/eslint-loader/index.js):
+
+/home/jakub/Repos/github-user-search/src/js/pages/AppContainer/AppContainer.js
+   9:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+  10:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  11:1  warning  Expected indentation of 12 spaces but found 3 tabs  indent
+  12:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  17:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+  18:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  19:1  warning  Expected indentation of 8 spaces but found 2 tabs   indent
+  20:1  warning  Expected indentation of 4 spaces but found 1 tab    indent
+
+✖ 8 problems (0 errors, 8 warnings)
+  0 errors and 8 warnings potentially fixable with the `--fix` option.
+
+ @ ./src/js/pages/AppContainer/index.js 1:0-57 1:0-57
+ @ ./init.js
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./init.js[39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+     1 asset
+    Entrypoint [1mundefined[39m[22m = [1m[32m./index.html[39m[22m
+       1 module
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
